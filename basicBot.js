@@ -1287,7 +1287,7 @@
                 } else return false;
                 var userPerm = basicBot.userUtilities.getPermission(chat.uid);
                 //console.log('name: ' + chat.un + ', perm: ' + userPerm);
-                if (chat.message !== basicBot.settings.commandLiteral + 'join' && chat.message !== basicBot.settings.commandLiteral + 'leave') {
+                if (chat.message !== basicBot.settings.commandLiteral + 'play' && chat.message !== basicBot.settings.commandLiteral + 'leave') {
                     if (userPerm === API.ROLE.NONE && !basicBot.room.usercommand) return void(0);
                     if (!basicBot.room.allcommand) return void(0);
                 }
@@ -2613,7 +2613,7 @@
             },
 
             joinCommand: {
-                command: 'join',
+                command: 'play',
                 rank: 'user',
                 type: 'exact',
                 functionality: function(chat, cmd) {
